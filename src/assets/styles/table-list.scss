@@ -1,0 +1,123 @@
+
+.table-list {
+    text-align: left;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    &__head {
+       padding-bottom: rem(10);
+        z-index: 2;
+        background: $grey-darker;
+        .table-list__item {
+            text-transform: uppercase;
+            font-family: $second-font;
+            color: $white;
+            font-weight: 500;
+            font-size: rem(10);
+            letter-spacing: rem(.8);
+        }
+        .table-list__row {
+            height: rem(40);
+        }
+    }
+    &__body {
+        overflow: auto;
+        .table-list__row {
+            &:hover {
+                background: $grey-light;
+            }
+            @media (max-width: 1024px) {
+                &:hover {
+                    background: $grey;
+                }
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0 rem(160) 0 rem(60);
+        background: $grey;
+        height: rem(80);
+        transition: .2s;
+
+        &--link {
+            cursor: pointer;
+        }
+        &+& {
+            margin-top: rem(10);
+        }
+    }
+    &__item {
+        font-family: $main-font;
+        color: $white;
+        font-weight: 500;
+        font-size: rem(14);
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: capitalize;
+        padding-right: rem(30);
+        padding-left: rem(10);
+        text-decoration: none;
+        background: none;
+        border: none;
+        outline: none;
+        &:first-child{
+            padding-left: 0;
+            width: 50%;
+            flex-shrink: 0;
+        }
+        &-title {
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &-sub-title {
+            display: block;
+            font-family: $main-font;
+            color: rgba($white,.5);
+            font-weight: 400;
+            font-size: rem(12);
+            padding-top: rem(4);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &:first-child {
+            text-transform: lowercase;
+        }
+    }
+    &__access {
+        display: inline-block;
+        &-btn {
+            opacity: 0.5;
+            transition: .2s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__settings {
+        position: absolute;
+        right: rem(26);
+        top: 50%;
+        transform: translateY(-50%) translateZ(0);
+        &-btn {
+            opacity: 0.4;
+            transition: opacity .2s;
+            margin: 0 12px;
+            padding: 4px 2px;
+            &.is-active,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

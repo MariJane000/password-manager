@@ -1,0 +1,128 @@
+.l-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: rem(20);
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+    &__head {
+        display: flex;  
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;  
+        margin: 0 0 rem(15);
+        min-height: rem(30);
+        z-index: 3;
+        &--right {
+            justify-content: flex-end;
+        }
+    }    
+
+    &__row {
+        display: flex;  
+        margin: 0 rem(-10);;
+        min-height: 0;
+        flex: 1;        
+        padding-bottom: rem(15);
+        flex-shrink: 0;
+        &--video {
+            min-height: rem(692);
+            .l-grid__sidebar {
+                overflow: hidden;
+            }
+        }
+        &--widgets {
+            flex: none;
+            align-items: flex-start;
+            justify-content: space-between;
+
+        }
+    }  
+    &__empty {
+        padding-bottom: rem(15);
+    }
+    &__tab-bar {
+        width: rem(380);
+        max-width: 100%;
+        flex-shrink: 0;
+    }
+    &__content {  
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 0 rem(10);
+        &--no-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+    }
+
+}
+
+.l-container {
+    width: rem(1200);
+    padding: 0 rem(10);
+    margin: 0 auto;
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding: 0 rem(20);
+    }
+}
+
+.l-flex{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.l-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.c-heading {
+    font-size: rem(18);
+    font-family: $main-font;
+    font-weight: 500;
+    color: $white;
+    display: flex;
+    align-items: center;
+    &__caption {
+        display: inline-block;
+        font-size: rem(18);
+        font-family: $main-font;
+        font-weight: 500;
+        color: $white;
+
+    }
+    &__sub-caption {
+        font-size: rem(12);
+        color: $white;
+        opacity: .4;
+        font-weight: 400;
+
+    }
+    &__btn  {
+        cursor: pointer;
+        display: block;
+        opacity: .4;
+        transition: .2s;
+        margin-right: rem(15);
+        &:hover {
+            opacity: .6;
+        }
+    }
+}

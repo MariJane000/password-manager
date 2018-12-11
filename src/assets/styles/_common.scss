@@ -1,0 +1,69 @@
+html, body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+    background-color: $grey-darker;
+    font-family: $main-font;
+    color: $white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    line-height: normal;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+a, button, input, select, textarea, [contenteditable="true"], [tabindex] {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    color: inherit;
+    padding: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 40px $white inset;
+}
+
+
+.body {
+    height: 100%;
+}

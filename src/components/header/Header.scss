@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    flex-shrink: 0;
+    z-index: 2;
+    &__logo {
+        display: block;
+    }
+    &__logout {
+        opacity: .4;
+        transition: .2s opacity;
+        margin: 0 0 0 auto;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.logo {
+    display: block;
+}

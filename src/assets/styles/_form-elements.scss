@@ -1,0 +1,77 @@
+// c-input
+.c-input {
+    width: 100%;
+    display: inline-block;
+    &__wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        position: relative;
+        &--small {
+            width: rem(100);
+        }
+    }
+    &__label {
+        color: $white;
+        font-family: $second-font;
+        font-weight: 500;
+        font-size: rem(9);
+        text-transform: uppercase;
+        letter-spacing: rem(.8);
+        opacity: .4;
+        margin-bottom: rem(5);
+        display: block;
+        z-index: 1;
+        white-space: nowrap;
+        &-holder {
+            position: relative;
+        }
+        sup {
+            font-size: 14px;
+            line-height: 5px;
+            vertical-align: middle
+        }
+    }
+    &__field {
+        background: rgba($white,.1);
+        border: 1px solid rgba($white,.1);
+        border-radius: 2px;
+        height: rem(34);
+        padding: rem(5) rem(9);
+        color: $white;
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: rem(14);
+        width: 100%;
+        &:focus,
+        &:active {
+            background: rgba($white,.15);
+            border: 1px solid rgba($white,.3);
+            &+.c-input__label-holder .c-input__label,
+            &+.c-input__label,
+            & + .c-input__icon {
+                opacity: 1;
+            }
+        }
+        &:not(:placeholder-shown) {
+            & + .c-input__icon {
+                opacity: 1;
+            }   
+        }
+        &.is-error {
+            border: 1px solid #E63739;
+        }
+        &-btn {
+            position: absolute;
+            right: 12px;
+            bottom: 9px;
+            opacity: 0.4;
+            transition: opacity .2s;
+            &.is-active,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+

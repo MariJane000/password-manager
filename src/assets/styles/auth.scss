@@ -1,0 +1,69 @@
+
+.auth {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url('./assets/images/pattern.svg');
+    background-repeat: repeat;
+    z-index: 1;
+    background-color: $grey-darker;
+    display: flex;
+    overflow: hidden;
+    padding: rem(15);
+    padding-top: rem(120);
+    &__inner {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        display: flex;
+        padding-bottom: 100px;
+    }
+    &__content {
+        background: $grey;
+        width: 100%;
+        max-width: rem(400);
+        min-height: rem(222);
+        margin: auto;
+        text-align: center;
+        padding: rem(30) rem(20);
+        display: flex;
+    }
+    &__wrapper {
+        margin: auto 0;
+        width: 100%;
+    }
+    &__form {
+        border-top: 1px solid rgba($white,.1);
+        margin-top: rem(16);
+    }
+    &__title {
+        color: $white;
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: rem(20);
+
+    }
+    &__sub-title {
+        color: $white;
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: rem(12);
+        padding-top: rem(4);
+        opacity: .8;
+        p {
+            margin: 0;
+        }
+        &--bottom {
+            padding-top: rem(20);
+        }
+    }
+    &__icon {
+        margin-bottom: rem(5);
+    }
+    &__link {
+        text-align: right;
+        padding-top: rem(10);
+    }
+}

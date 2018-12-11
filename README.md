@@ -1,4 +1,4 @@
-Password Manager - test project for GBSFO
+# Password Manager - test project for GBSFO
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
